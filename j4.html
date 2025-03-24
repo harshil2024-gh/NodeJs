@@ -1,0 +1,30 @@
+<!-- Built In functions -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var t =
+        {
+            "name": "test",
+            "age": 21,
+            "subject": ["FSD2", "FCSP2"]
+        }
+        var jString = JSON.stringify(t);
+        console.log(jString);
+        // condole.log(jString.subject); //-->Cannot access after convert into string.->ReferenceError
+        // console.log(jString.age); -->undefined
+        var jObj = JSON.parse(jString);
+        console.log(jObj);
+        console.log(jObj.name);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

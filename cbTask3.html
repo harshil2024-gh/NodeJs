@@ -1,0 +1,43 @@
+<!-- Increase font size  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var font = 50
+        function fun(font) {
+            document.getElementById("para").style.fontSize = font + "px";
+            font++;
+        }
+        function inc() {
+            test = setInterval(() => {
+                if (font <= 100) {
+                    fun(font++);
+                }
+            }, 100);
+        }
+        function dec() {
+            test = setInterval(() => {
+                if (font >= 15) {
+                    fun(font--);
+                }
+            }, 100);
+        }
+        function stop() {
+            clearInterval(test);
+        }
+    </script>
+</head>
+
+<body>
+    <p id="para">Hello, this is a paragraph.</p>
+    <button onclick="inc()">Increase</button>
+    <button onclick="dec()">Decrease</button>
+    <button onclick="stop()">Stop</button>
+
+</body>
+
+</html>
